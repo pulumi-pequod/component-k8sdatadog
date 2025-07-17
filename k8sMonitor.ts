@@ -26,7 +26,7 @@ export class K8sMonitor extends ComponentResource {
       version: args.datadogHelmChartVersion || "3.123.2",
       values: {
           datadog: {
-            apiKey: args.apiKey,
+            apiKey: args.datadogApiKey,
             logs: {
               enabled: true,
             },
