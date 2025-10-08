@@ -3,12 +3,21 @@ import * as k8s from "@pulumi/kubernetes";
 
 // Interface for StackSettings
 export interface K8sMonitorArgs{
+  /**
+   * Datadog API Key for the agent to use.
+   **/
   datadogApiKey: Output<string>,
+  /**
+   * Version of the Datadog Helm Chart to use. Defaults to 3.123.2
+   **/
   datadogHelmChartVersion?: string,
 }
 
 // Forces Pulumi stack settings for managing TTL and other settings.
 export class K8sMonitor extends ComponentResource {
+  /**
+   * The namespace where the Datadog agent is deployed.
+   **/
   public readonly namespace: Output<string>;
 
   constructor(name: string, args: K8sMonitorArgs, opts?: ComponentResourceOptions) {
