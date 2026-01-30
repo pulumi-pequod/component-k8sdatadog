@@ -1,15 +1,6 @@
 # component-k8sdatadog
 Pulumi Component to deploy datadog monitor in K8s cluster using the [Datadog helm chart](https://artifacthub.io/packages/helm/datadog/datadog).
 
-# Inputs
-
-* datadogApiKey: API key to interface with Datadog.
-* datadogHelmChartVersion (Optional): Version of the [Datadog Helmchart](https://artifacthub.io/packages/helm/datadog/datadog) to use. If not specified, a default version is used.
-
-# Outputs
-
-* datadogNamespace: The Datadog namespace that contains the monitoring output.
-
 # Usage
 ## Specify Package in `Pulumi.yaml`
 
